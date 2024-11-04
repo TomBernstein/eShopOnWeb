@@ -1,8 +1,7 @@
 usname: eShopOnWeb Build and Test
 
 #Triggers (uncomment line below to use it)
-on:
-  workflow_dispatch:
+on: workflow_dispatch
 
 #Environment variables https://docs.github.com/en/actions/learn-github-actions/environment-variables
 env:
@@ -22,7 +21,7 @@ jobs:
     - uses: actions/checkout@v4
     #prepare runner for desired .net version SDK
     - name: Setup .NET
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v4 :w_dispatch
       with:
         dotnet-version: '8.0.x'
         dotnet-quality: 'preview'
